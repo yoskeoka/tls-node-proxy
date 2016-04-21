@@ -3,6 +3,7 @@ var http = require('http');
 var https = require('https');
 var httpProxy = require('http-proxy');
 
+var uid = 502; //node-http-proxyを動作させるUserId
 var sslkeyPath = '/etc/letsencrypt/live/goita.beta.or.jp/'
 var options = {
     key: fs.readFileSync(sslkeyPath + 'privkey.pem', 'utf8'),
@@ -28,6 +29,10 @@ var sslproxy = httpProxy.createServer({
     ssl: options  
 });
 
-server.listen(80); //root is required to run service on port 80.
-sslproxy.listen(443); //root is required to run service on port 443.
+server.listen(80, function(){
+    process.setuid(uid);
+}); //root is required to run service on port 80.
+sslproxy.listen(443, function(){
+    process.setuid(uid);
+}); //root is required to run service on port 443.
 console.log("proxy server started");
