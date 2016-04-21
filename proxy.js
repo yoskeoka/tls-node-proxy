@@ -28,11 +28,6 @@ var sslproxy = httpProxy.createServer({
     ssl: options  
 });
 
-sslproxy.on('upgrade', function (req, socket, head) {
-    console.log("ssl websocket!");
-    proxy.ws(req, socket, head);
-});
-
 server.listen(80); //root is required to run service on port 80.
 sslproxy.listen(443); //root is required to run service on port 443.
 console.log("proxy server started");
