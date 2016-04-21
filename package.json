@@ -1,0 +1,28 @@
+{
+  "name": "tls-node-proxy",
+  "version": "1.0.0",
+  "description": "proxy server to Node.js service with TLS",
+  "main": "proxy.js",
+  "dependencies": {
+    "http-proxy": "^1.13.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandalabo/tls-node-proxy.git"
+  },
+  "keywords": [
+    "proxy",
+    "ssl",
+    "node.js"
+  ],
+  "author": "yoske",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pandalabo/tls-node-proxy/issues"
+  },
+  "homepage": "https://github.com/pandalabo/tls-node-proxy#readme"
+}
