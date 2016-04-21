@@ -4,8 +4,7 @@
   "description": "proxy server to Node.js service with TLS",
   "main": "proxy.js",
   "dependencies": {
-    "http-proxy": "^1.13.2",
-    "http2": "^3.3.2"
+    "http-proxy": "^1.13.2"
   },
   "devDependencies": {},
   "scripts": {
